@@ -35,7 +35,7 @@
                 const parser = new window.DOMParser();
                 const xml = parser.parseFromString(str, "text/xml");
                 for (const itemTag of xml.querySelectorAll('item')) {
-                    veiculo.itens.push(itemTag);
+                    veiculo.itens.push(itemTag.children);
                 }
             }
         );
